@@ -4,7 +4,7 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 
 class Question extends React.Component {

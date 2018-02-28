@@ -5,7 +5,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 
 class QuestionContainer extends React.Component {
@@ -53,10 +54,10 @@ class QuestionContainer extends React.Component {
       />);
     });
     return (
-      <View >
+      <ScrollView >
         <Text> Question: </Text>
         {allQuestions}
-      </View>
+      </ScrollView>
     );
   }
 }
