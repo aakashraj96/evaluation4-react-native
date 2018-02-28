@@ -19,7 +19,8 @@ const Form = props => (
           <TextInput style={styles.inputStyle} onChangeText={(value) => {
           props.updateUsername(value);
         }}
-      value={props.username}/>
+      value={props.username}
+      autoCapitalize = 'none'/>
           <Button title="Login" onPress={() => {
             fetch('http://localhost:8080/login', {
               method: 'post',
