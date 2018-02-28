@@ -18,11 +18,14 @@ class Question extends React.Component {
   }
 
   render() {
+    const options = Object.keys(JSON.parse(this.props.options)).map((key) => {
+      return (<Text> {JSON.parse(this.props.options)[key]} </Text>);
+    })
       return (
         <View style={{backgroundColor:'#44C7F5', margin:10}}>
         <Text> Question {this.props.id}</Text>
         <Text> {this.props.ques} </Text>
-        <Text> {this.props.options} </Text>
+        {options}
         </View>
       );
   }
