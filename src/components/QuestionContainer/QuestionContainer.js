@@ -1,7 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './QuestionContainer.css';
 import Question from '../Question/Question';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
 
 class QuestionContainer extends React.Component {
   constructor() {
@@ -12,7 +17,9 @@ class QuestionContainer extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/getQuestions').then(resp => resp.json()).then((data) => {
+    console.log('Component did mount');
+    fetch('http://localhost:8080/getQuestions').then(resp => resp.json()).then((data) => {
+      console.log('Questions are: ',data);
       this.props.updateTotal(data.length);
       this.props.setCount(data.length - this.props.prevResponses.length);
       this.setState({
@@ -46,10 +53,10 @@ class QuestionContainer extends React.Component {
       />);
     });
     return (
-      <div className="questionContainer">
-        <h1> Question: </h1>
+      <View >
+        <Text> Question: </Text>
         {allQuestions}
-      </div>
+      </View>
     );
   }
 }

@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import Header from './components/Header/Header';
 import Form from './components/Form/Form';
+import QuestionContainer from './components/QuestionContainer/QuestionContainer';
 
 
 type Props = {};
@@ -83,6 +84,13 @@ export default class App extends Component<Props> {
     return(
       <View>
       <Text>hello</Text>
+      <QuestionContainer
+        username={this.state.username}
+        prevResponses={this.state.prevResponses}
+        updateTotal={this.updateTotal}
+        setCount={this.setCount}
+        updateCount={this.updateCount}
+      />
       </View>
     );
     
