@@ -32,7 +32,7 @@ const Form = props => (
               }),
             }).then(resp => resp.json()).then((data) => {
               console.log(data);
-              // props.changePageNumber(1);
+              props.changePageNumber(1);
               props.updatePrevResponse(data.prevResponse);
               alert(JSON.stringify(data.prevResponse[0]));
             });

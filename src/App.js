@@ -80,9 +80,12 @@ export default class App extends Component<Props> {
     );
   }
   else if(this.state.pageNumber===1) {
-    <View>
-    <Text>hello</Text>
-    </View>
+    return(
+      <View>
+      <Text>hello</Text>
+      </View>
+    );
+    
   }
   }
 }
