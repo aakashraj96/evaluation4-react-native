@@ -83,7 +83,6 @@ export default class App extends Component<Props> {
   else if(this.state.pageNumber===1) {
     return(
       <View>
-      <Text>hello</Text>
       <QuestionContainer
         username={this.state.username}
         prevResponses={this.state.prevResponses}

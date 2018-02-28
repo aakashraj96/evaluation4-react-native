@@ -23,7 +23,7 @@ class Question extends React.Component {
     })
       return (
         <View style={{backgroundColor:'#44C7F5', margin:10}}>
-        <Text> Question {this.props.id}</Text>
+        <Text> Question {this.props.id+1}</Text>
         <Text> {this.props.ques} </Text>
         {options}
         </View>

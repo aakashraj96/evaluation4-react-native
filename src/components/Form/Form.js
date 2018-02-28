@@ -34,7 +34,7 @@ const Form = props => (
               console.log(data);
               props.changePageNumber(1);
               props.updatePrevResponse(data.prevResponse);
-              alert(JSON.stringify(data.prevResponse[0]));
+              // alert(JSON.stringify(data.prevResponse[0]));
             });
           }}/>
         </View>
